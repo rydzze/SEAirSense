@@ -55,14 +55,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener("DOMContentLoaded", function() {
     const token = '14cfeb69780af16f656322f65c8a3ba4f6000f14'
-    var OSM_URL = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';  
-    var OSM_ATTRIB = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors';  
-    var osmLayer = L.tileLayer(OSM_URL, {attribution: OSM_ATTRIB});  
+    
+    function  initBingMap()  {           
+        var map = new Microsoft.Maps.Map(document.getElementById('map'),{  
+            center:  new  Microsoft.Maps.Location(4.2580, 102.6628),  
+            zoom:  7,
+            credentials: 'As0j-BTZRllD4AlN56YnR4ZP0hEIm5_3SrO1-lu-cYzwbs_PB-tdM7OKNn_7tsNK'
+        });  
 
-    var WAQI_URL = `https://tiles.waqi.info/tiles/usepa-aqi/{z}/{x}/{y}.png?token=${token}`;  
-    var WAQI_ATTR = 'Air Quality Tiles &copy; <a href="http://waqi.info">waqi.info</a>';  
-    var waqiLayer = L.tileLayer(WAQI_URL, {attribution: WAQI_ATTR});  
+        var options = {  
+            uriConstructor: `https://tiles.aqicn.org/tiles/usepa-aqi//{zoom}/{x}/{y}.png?token=${token}`,  
+            minZoom: 1,  
+            maxZoom: 15  
+        };
+        var waqiTileSource = new Microsoft.Maps.TileSource(options);  
+        var waqiTilelayer = new Microsoft.Maps.TileLayer({mercator: waqiTileSource});  
+        map.layers.insert(waqiTilelayer);
+    }
 
-    var map = L.map('map').setView([2.2180, 115.6628], 5);
-    map.addLayer(osmLayer).addLayer(waqiLayer); 
+    window.initBingMap = initBingMap;
 });
