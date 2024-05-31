@@ -7,24 +7,17 @@
     <title>SEAirSense | Home</title>
     
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css"/> 
-
-    <script src='https://www.bing.com/api/maps/mapcontrol?callback=initBingMap' async defer></script>  
-    <script src="js/script.js"></script>
-    <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 
 <body>
     <div id="header-placeholder"></div>
-
+    
     <main>
         <section>
             <h2>Interactive Map</h2>
             <div id="map"></div>
-
-            <h2>Location Status</h2>
-            <p><span id="aqi-value">Loading...</span></p>
-            <p><span id="location-details">Location: Loading...</span></p>
             
             <h2>Info Testing</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -32,6 +25,7 @@
     </main>
     
     <div id="footer-placeholder"></div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
