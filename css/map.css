@@ -1,0 +1,17 @@
+/* Map and AQI Widget Styles */
+
+#interactive-map {
+    padding: 90px;
+}
+
+#map {
+    flex: 6;
+    width: 70%;
+    height: 700px;
+    border-radius: 10px;
+}
+
+[name="overview_aqi"] {
+    flex: 2;
+    height: 500px;
+}

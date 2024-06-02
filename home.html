@@ -15,17 +15,100 @@
     <div id="header-placeholder"></div>
     
     <main>
-        <section>
+        <section class="banner">
+            <div class="banner-left">
+                <h1>SEAirSense</h1>
+                <p>Discover the air you breathe with SEAirSense. We're your friendly guide to understanding air quality in South East Asia. Our system keeps an eye on pollution levels, helping you make smarter choices for your health and environment.</p>
+                <a href="#" class="map-button" onclick="scrollToMap()">See Map &gt</a>
+            </div>
+            <div class="banner-right"></div>
+        </section>
+
+        <section id="interactive-map">
             <h2>Interactive Map</h2>
-            <div id="map"></div>
-            
-            <h2>Info Testing</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="flex-container">
+                <div id="map"></div>
+                <div name="overview_aqi">
+                    <br>
+                    <h3>Your Current Location's AQI</h3>
+                    <div name="airvisual_widget" key="665c86b77712d29e00c456f0"></div>
+                    <script src="https://widget.iqair.com/script/widget_v3.0.js"></script>
+                    <br><br>
+                    <h3>Other Areas' AQI</h3>
+                    <div name="airvisual_widget" key="665c8c8cf9ab7b8c04c4a77e"></div>
+                    <script type="text/javascript" src="https://widget.iqair.com/script/widget_v3.0.js"></script>
+                    <br>
+                    <div name="airvisual_widget" key="665c8cf6d8af85c372e09b00"></div>
+                    <script type="text/javascript" src="https://widget.iqair.com/script/widget_v3.0.js"></script>
+                    <br>
+                    <div name="airvisual_widget" key="665d8574548fb0ff4abbcc9c"></div>
+                    <script type="text/javascript" src="https://widget.iqair.com/script/widget_v3.0.js"></script>
+                </div>            
+            </div>
+        </section>
+        
+        <section>
+            <h2>Air Quality Index Scaling Guide</h2>
+            <table border="1">
+                <tr>
+                    <td>AQI</td>
+                    <td>Air Pollution Level</td>
+                    <td>Health Implications</td>
+                    <td>Cautionary Statement (for PM2.5)</td>
+                </tr>
+                <tr>
+                    <td>0 - 50</td>
+                    <td>Good</td>
+                    <td>Air quality is considered satisfactory, and air pollution poses little or no risk</td>
+                    <td>None</td>
+                </tr>
+                <tr>
+                    <td>51 - 100</td>
+                    <td>Moderate</td>
+                    <td>Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.</td>
+                    <td>Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.</td>
+                </tr>
+                <tr>
+                    <td>101 - 150</td>
+                    <td>Unhealthy for Sensitive Groups</td>
+                    <td>Members of sensitive groups may experience health effects. The general public is not likely to be affected.</td>
+                    <td>Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.</td>
+                </tr>
+                <tr>
+                    <td>151 - 200</td>
+                    <td>Unhealthy</td>
+                    <td>Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects</td>
+                    <td>Active children and adults, and people with respiratory disease, such as asthma, should avoid prolonged outdoor exertion; everyone else, especially children, should limit prolonged outdoor exertion</td>
+                </tr>
+                <tr>
+                    <td>201 - 300</td>
+                    <td>Very Unhealthy</td>
+                    <td>Health warnings of emergency conditions. The entire population is more likely to be affected.</td>
+                    <td>Active children and adults, and people with respiratory disease, such as asthma, should avoid all outdoor exertion; everyone else, especially children, should limit outdoor exertion.</td>
+                </tr>
+                <tr>
+                    <td>300+</td>
+                    <td>Hazardous</td>
+                    <td>Health alert: everyone may experience more serious health effects</td>
+                    <td>Everyone should avoid all outdoor exertion</td>
+                </tr>
+            </table>
         </section>
     </main>
     
     <div id="footer-placeholder"></div>
     <script src="js/script.js"></script>
+    <script>
+        function scrollToMap() {
+            var headerHeight = document.getElementById('header-placeholder').offsetHeight;
+            var mapTop = document.getElementById('interactive-map').offsetTop;
+
+            document.querySelector('#interactive-map').scrollIntoView({
+                top: mapTop - 100,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 
 </html>

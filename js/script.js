@@ -11,6 +11,7 @@ fetch('component/footer.html')
     .then(data => {
         document.getElementById('footer-placeholder').innerHTML = data;
     });
+    
 
 
 // Interactive Map
