@@ -26,14 +26,12 @@
 
         <section id="interactive-map">
             <h2>Interactive Map</h2>
-            <div class="flex-container">
+            <div class="aqi-container">
                 <div id="map"></div>
-                <div name="overview_aqi">
-                    <br>
+                <div id="overview_aqi">
                     <h3>Your Current Location's AQI</h3>
                     <div name="airvisual_widget" key="665c86b77712d29e00c456f0"></div>
                     <script src="https://widget.iqair.com/script/widget_v3.0.js"></script>
-                    <br><br>
                     <h3>Other Areas' AQI</h3>
                     <div name="airvisual_widget" key="665c8c8cf9ab7b8c04c4a77e"></div>
                     <script type="text/javascript" src="https://widget.iqair.com/script/widget_v3.0.js"></script>
@@ -47,52 +45,57 @@
             </div>
         </section>
         
-        <section>
+        <section class="aqi-scale">
             <h2>Air Quality Index Scaling Guide</h2>
-            <table border="1">
-                <tr>
-                    <td>AQI</td>
-                    <td>Air Pollution Level</td>
-                    <td>Health Implications</td>
-                    <td>Cautionary Statement (for PM2.5)</td>
-                </tr>
-                <tr>
-                    <td>0 - 50</td>
-                    <td>Good</td>
-                    <td>Air quality is considered satisfactory, and air pollution poses little or no risk</td>
-                    <td>None</td>
-                </tr>
-                <tr>
-                    <td>51 - 100</td>
-                    <td>Moderate</td>
-                    <td>Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.</td>
-                    <td>Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.</td>
-                </tr>
-                <tr>
-                    <td>101 - 150</td>
-                    <td>Unhealthy for Sensitive Groups</td>
-                    <td>Members of sensitive groups may experience health effects. The general public is not likely to be affected.</td>
-                    <td>Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.</td>
-                </tr>
-                <tr>
-                    <td>151 - 200</td>
-                    <td>Unhealthy</td>
-                    <td>Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects</td>
-                    <td>Active children and adults, and people with respiratory disease, such as asthma, should avoid prolonged outdoor exertion; everyone else, especially children, should limit prolonged outdoor exertion</td>
-                </tr>
-                <tr>
-                    <td>201 - 300</td>
-                    <td>Very Unhealthy</td>
-                    <td>Health warnings of emergency conditions. The entire population is more likely to be affected.</td>
-                    <td>Active children and adults, and people with respiratory disease, such as asthma, should avoid all outdoor exertion; everyone else, especially children, should limit outdoor exertion.</td>
-                </tr>
-                <tr>
-                    <td>300+</td>
-                    <td>Hazardous</td>
-                    <td>Health alert: everyone may experience more serious health effects</td>
-                    <td>Everyone should avoid all outdoor exertion</td>
-                </tr>
+            <table>
+                <thead>
+                    <tr>
+                        <th>AQI</th>
+                        <th>Air Pollution Level</th>
+                        <th>Health Implications</th>
+                        <th>Cautionary Statement (for PM2.5)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="aqi-good">0 - 50</td>
+                        <td class="aqi-good">Good</td>
+                        <td>Air quality is considered satisfactory, and air pollution poses little or no risk</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td class="aqi-moderate">51 - 100</td>
+                        <td class="aqi-moderate">Moderate</td>
+                        <td>Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.</td>
+                        <td>Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.</td>
+                    </tr>
+                    <tr>
+                        <td class="aqi-unhealthy-sg">101 - 150</td>
+                        <td class="aqi-unhealthy-sg">Unhealthy for Sensitive Groups</td>
+                        <td>Members of sensitive groups may experience health effects. The general public is not likely to be affected.</td>
+                        <td>Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.</td>
+                    </tr>
+                    <tr>
+                        <td class="aqi-unhealthy">151 - 200</td>
+                        <td class="aqi-unhealthy">Unhealthy</td>
+                        <td>Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects</td>
+                        <td>Active children and adults, and people with respiratory disease, such as asthma, should avoid prolonged outdoor exertion; everyone else, especially children, should limit prolonged outdoor exertion</td>
+                    </tr>
+                    <tr>
+                        <td class="aqi-very-unhealthy">201 - 300</td>
+                        <td class="aqi-very-unhealthy">Very Unhealthy</td>
+                        <td>Health warnings of emergency conditions. The entire population is more likely to be affected.</td>
+                        <td>Active children and adults, and people with respiratory disease, such as asthma, should avoid all outdoor exertion; everyone else, especially children, should limit outdoor exertion.</td>
+                    </tr>
+                    <tr>
+                        <td class="aqi-hazardous">300+</td>
+                        <td class="aqi-hazardous">Hazardous</td>
+                        <td>Health alert: everyone may experience more serious health effects</td>
+                        <td>Everyone should avoid all outdoor exertion</td>
+                    </tr>
+                </tbody>
             </table>
+            <p id="cred">Source: Data provided by <a href="https://waqi.info/">waqi.info</a></p>
         </section>
     </main>
     

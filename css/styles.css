@@ -1,7 +1,19 @@
+/* CSS for All HTML */
+
 @import url('base.css');
+
+/* CSS for Components */
+
 @import url('header.css');
 @import url('footer.css');
+
+/* CSS for Homepage */
+
 @import url('layout.css');
 @import url('banner.css');
 @import url('map.css');
+@import url('aqi_table.css');
+
+/* CSS for Different View */
+
 @import url('responsive.css');

@@ -1,0 +1,88 @@
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+}
+
+#cred {
+    text-align: right;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.aqi-scale {
+    padding-top: 85px;
+    padding-bottom: 45px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    color: #333;
+}
+
+table th, table td {
+    padding: 12px 15px;
+}
+
+table thead th {
+    background-color: #00dab5;
+    color: #222222;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    border-bottom: 2px solid #ddd;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:last-of-type {
+    border-bottom: 2px solid #ddd;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+table td {
+    vertical-align: middle;
+}
+
+.aqi-good {
+    background-color: #096;
+    color: #fff;
+}
+
+.aqi-moderate {
+    background-color: #ffde33;
+    color: #fff;
+}
+
+.aqi-unhealthy-sg {
+    background-color: #f93;
+    color: #fff;
+}
+
+.aqi-unhealthy {
+    background-color: #c03;
+    color: #fff;
+}
+
+.aqi-very-unhealthy {
+    background-color: #609;
+    color: #fff;
+}
+
+.aqi-hazardous {
+    background-color: #7e0023;
+    color: #fff;
+}

@@ -1,17 +1,24 @@
 /* Map and AQI Widget Styles */
 
+/* Flex Container Styles */
+
 #interactive-map {
-    padding: 90px;
+    padding-top: 85px;
+    padding-bottom: 50px;
+}
+
+.aqi-container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 75px;
+    width: 100%;
 }
 
 #map {
-    flex: 6;
-    width: 70%;
-    height: 700px;
     border-radius: 10px;
+    height: calc(100vh - 225px);
 }
 
-[name="overview_aqi"] {
-    flex: 2;
-    height: 500px;
+#overview_aqi {
+    height: calc(100vh - 225px);
 }
