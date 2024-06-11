@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SEAirSense | Home</title>
     
+    <link rel="icon" type="image/png" href="img/seairsense.png">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
@@ -15,13 +17,15 @@
     <div id="header-placeholder"></div>
     
     <main>
-        <section class="banner">
-            <div class="banner-left">
-                <h1>SEAirSense</h1>
-                <p>Discover the air you breathe with SEAirSense. We're your friendly guide to understanding air quality in South East Asia. Our system keeps an eye on pollution levels, helping you make smarter choices for your health and environment.</p>
-                <a href="#" class="map-button" onclick="scrollToMap()">See Map &gt</a>
+        <section class="banner1">
+            <div class="banner1-left">
+                <img style="max-width: 25%;" src="img/seairsense.png" alt="SEAirSense Logo">
+                <h1>SEAirSense</h1><br>
+                <p>Explore air quality with <strong>SEAirSense</strong>, your trusted companion for understanding pollution levels in South East Asia, employing cutting-edge technology to offer real-time insights into air quality.</p>
+                <p>With <strong>SEAirSense</strong>, you'll gain invaluable knowledge to make informed decisions that prioritize your health and contribute to a cleaner, safer environment for all.</p><br>
+                <a href="#" class="map-button" onclick="scrollToMap()">See Map</a>
             </div>
-            <div class="banner-right"></div>
+            <div class="banner1-right"></div>
         </section>
 
         <section id="interactive-map">
@@ -31,16 +35,10 @@
                 <div id="overview_aqi">
                     <h3>Your Current Location's AQI</h3>
                     <div name="airvisual_widget" key="665c86b77712d29e00c456f0"></div>
-                    <script src="https://widget.iqair.com/script/widget_v3.0.js"></script>
                     <h3>Other Areas' AQI</h3>
-                    <div name="airvisual_widget" key="665c8c8cf9ab7b8c04c4a77e"></div>
-                    <script type="text/javascript" src="https://widget.iqair.com/script/widget_v3.0.js"></script>
-                    <br>
-                    <div name="airvisual_widget" key="665c8cf6d8af85c372e09b00"></div>
-                    <script type="text/javascript" src="https://widget.iqair.com/script/widget_v3.0.js"></script>
-                    <br>
+                    <div name="airvisual_widget" key="665c8c8cf9ab7b8c04c4a77e"></div><br>
+                    <div name="airvisual_widget" key="665c8cf6d8af85c372e09b00"></div><br>
                     <div name="airvisual_widget" key="665d8574548fb0ff4abbcc9c"></div>
-                    <script type="text/javascript" src="https://widget.iqair.com/script/widget_v3.0.js"></script>
                 </div>            
             </div>
         </section>
@@ -101,6 +99,7 @@
     
     <div id="footer-placeholder"></div>
     <script src="js/script.js"></script>
+    <script type="text/javascript" src="https://widget.iqair.com/script/widget_v3.0.js"></script>
     <script>
         function scrollToMap() {
             var headerHeight = document.getElementById('header-placeholder').offsetHeight;
