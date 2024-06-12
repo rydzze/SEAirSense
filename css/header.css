@@ -13,28 +13,26 @@ header {
     z-index: 1000;
 }
 
-.header {
+#header {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.left-nav {
+#left-nav {
     display: flex;
     justify-content: flex-end;
     width: 40%;
 }
 
-.right-nav {
+#right-nav {
     display: flex;
     justify-content: flex-start;
     width: 40%;
 }
 
-.header .center {
-    width: 20%;
-    text-align: center;
-}
+
+/* Text Glowing Styles */
 
 header h1 {
     margin: 0;
@@ -54,6 +52,7 @@ header h1 {
         color: #00dab5;
     }
 }
+
 
 /* Navigation Styles */
 

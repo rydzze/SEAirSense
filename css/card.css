@@ -1,0 +1,48 @@
+/* Card 'Holder' Styles  */
+
+.cards {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+
+
+/* Card Styles */
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 50px 30px;
+    margin: 10px;
+    flex: 1 0 auto;
+    max-width: calc(25% - 20px);
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.01);
+}
+
+.card h3 {
+    font-size: 22px;
+    text-align: center;
+}
+
+.card p {
+    font-size: 18px;
+    text-align: justify;
+}
+
+.center {
+    display: block;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}

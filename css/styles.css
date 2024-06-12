@@ -3,12 +3,16 @@
 @import url('layout.css');
 
 
-/* CSS for Components */
+/* CSS for Header and Footer */
 
 @import url('header.css');
 @import url('footer.css');
 
 
-/* CSS for Responsive View */
+/* CSS for Specific Component */
 
-@import url('responsive.css');
+@import url('map.css');
+@import url('aqi-table.css');
+@import url('aqi-card.css');
+@import url('card.css');
+@import url('banner.css');

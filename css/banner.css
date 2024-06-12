@@ -1,0 +1,151 @@
+/* Banner 1 Styles */
+
+#banner1 {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-gap: 20px;
+    background-color: #fdfdfd;
+    color: black;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+}
+
+#banner1-left {
+    text-align: justify;
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 175px);
+}
+
+.map-button {
+    bottom: 20px;
+    left: 20px;
+    width: 20%;
+    padding: 10px 5px;
+    background-color: #00dab5;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.map-button:hover {
+    background-color: #00967d;
+}
+
+#banner1 h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+#banner1 p {
+    font-size: 1.25em;
+    max-width: 800px;
+    margin: 20px 0;
+}
+
+#banner1-right {
+    background-image: url('../img/banner1.jpg');
+    position: relative;
+    overflow: hidden;
+    height: calc(100vh - 175px);
+    border-radius: 0px 10px 10px 0px;
+}
+
+#banner1-right::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    mix-blend-mode: multiply;
+    border-radius: 0px 10px 10px 0px;
+}
+
+#banner1-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0px 10px 10px 0px;
+    mix-blend-mode: multiply;
+}
+
+
+
+/* Banner 2 Styles */
+
+#banner2 {
+    width: 95%;
+    margin: 50px auto;
+    padding: 50px;
+    text-align: justify;
+    background-color: #00967d;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#banner2 h2, #banner2 p {
+    color: #fff;
+}
+
+#center-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+#center-text p {
+    text-align: justify;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+
+
+/* Banner 3 Styles */
+
+#banner3 {
+    background-color: #00967d;
+    color: #ffffff;
+    padding: 50px 0;
+    margin-bottom: 75px;
+    height: calc(100vh - 400px);
+    background-image: url('../img/banner2.gif');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
+
+#banner3::before {
+    content: "";
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#banner3 h1 {
+    font-size: 3em;
+    font-style: italic;
+    max-width: 80%;
+    z-index: 1;
+}

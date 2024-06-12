@@ -1,0 +1,24 @@
+/* Map and AQI Widget Styles */
+
+#interactive-map {
+    padding-top: 85px;
+    padding-bottom: 50px;
+    margin-bottom: 25px;
+}
+
+#aqi-container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 75px;
+    width: 100%;
+}
+
+#map {
+    border-radius: 10px;
+    height: calc(100vh - 225px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#overview_aqi {
+    height: calc(100vh - 225px);
+}

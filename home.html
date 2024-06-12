@@ -8,7 +8,6 @@
     
     <link rel="icon" type="image/png" href="img/seairsense.png">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
@@ -17,34 +16,36 @@
     <div id="header-placeholder"></div>
     
     <main>
-        <section class="banner1">
-            <div class="banner1-left">
+        <section id="banner1">
+            <div id="banner1-left">
                 <img style="max-width: 25%;" src="img/seairsense.png" alt="SEAirSense Logo">
                 <h1>SEAirSense</h1><br>
                 <p>Explore air quality with <strong>SEAirSense</strong>, your trusted companion for understanding pollution levels in South East Asia, employing cutting-edge technology to offer real-time insights into air quality.</p>
                 <p>With <strong>SEAirSense</strong>, you'll gain invaluable knowledge to make informed decisions that prioritize your health and contribute to a cleaner, safer environment for all.</p><br>
                 <a href="#" class="map-button" onclick="scrollToMap()">See Map</a>
             </div>
-            <div class="banner1-right"></div>
+            <div id="banner1-right"></div>
         </section>
 
         <section id="interactive-map">
             <h2>Interactive Map</h2>
-            <div class="aqi-container">
+            <div id="aqi-container">
                 <div id="map"></div>
                 <div id="overview_aqi">
                     <h3>Your Current Location's AQI</h3>
-                    <div name="airvisual_widget" key="665c86b77712d29e00c456f0"></div>
+                        <div name="airvisual_widget" key="665c86b77712d29e00c456f0"></div>
+
                     <h3>Other Areas' AQI</h3>
-                    <div name="airvisual_widget" key="665c8c8cf9ab7b8c04c4a77e"></div><br>
-                    <div name="airvisual_widget" key="665c8cf6d8af85c372e09b00"></div><br>
-                    <div name="airvisual_widget" key="665d8574548fb0ff4abbcc9c"></div>
+                        <div name="airvisual_widget" key="665c8c8cf9ab7b8c04c4a77e"></div><br>
+                        <div name="airvisual_widget" key="665c8cf6d8af85c372e09b00"></div><br>
+                        <div name="airvisual_widget" key="665d8574548fb0ff4abbcc9c"></div>
                 </div>            
             </div>
         </section>
         
-        <section class="aqi-scale">
+        <section id="aqi-scale">
             <h2>Air Quality Index Scaling Guide</h2>
+
             <table>
                 <thead>
                     <tr>
@@ -56,48 +57,50 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="aqi-good">0 - 50</td>
-                        <td class="aqi-good">Good</td>
+                        <td id="aqi-good">0 - 50</td>
+                        <td id="aqi-good">Good</td>
                         <td>Air quality is considered satisfactory, and air pollution poses little or no risk</td>
                         <td>None</td>
                     </tr>
                     <tr>
-                        <td class="aqi-moderate">51 - 100</td>
-                        <td class="aqi-moderate">Moderate</td>
+                        <td id="aqi-moderate">51 - 100</td>
+                        <td id="aqi-moderate">Moderate</td>
                         <td>Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.</td>
                         <td>Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.</td>
                     </tr>
                     <tr>
-                        <td class="aqi-unhealthy-sg">101 - 150</td>
-                        <td class="aqi-unhealthy-sg">Unhealthy for Sensitive Groups</td>
+                        <td id="aqi-unhealthy-sg">101 - 150</td>
+                        <td id="aqi-unhealthy-sg">Unhealthy for Sensitive Groups</td>
                         <td>Members of sensitive groups may experience health effects. The general public is not likely to be affected.</td>
                         <td>Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.</td>
                     </tr>
                     <tr>
-                        <td class="aqi-unhealthy">151 - 200</td>
-                        <td class="aqi-unhealthy">Unhealthy</td>
+                        <td id="aqi-unhealthy">151 - 200</td>
+                        <td id="aqi-unhealthy">Unhealthy</td>
                         <td>Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects</td>
                         <td>Active children and adults, and people with respiratory disease, such as asthma, should avoid prolonged outdoor exertion; everyone else, especially children, should limit prolonged outdoor exertion</td>
                     </tr>
                     <tr>
-                        <td class="aqi-very-unhealthy">201 - 300</td>
-                        <td class="aqi-very-unhealthy">Very Unhealthy</td>
+                        <td id="aqi-very-unhealthy">201 - 300</td>
+                        <td id="aqi-very-unhealthy">Very Unhealthy</td>
                         <td>Health warnings of emergency conditions. The entire population is more likely to be affected.</td>
                         <td>Active children and adults, and people with respiratory disease, such as asthma, should avoid all outdoor exertion; everyone else, especially children, should limit outdoor exertion.</td>
                     </tr>
                     <tr>
-                        <td class="aqi-hazardous">300+</td>
-                        <td class="aqi-hazardous">Hazardous</td>
+                        <td id="aqi-hazardous">300+</td>
+                        <td id="aqi-hazardous">Hazardous</td>
                         <td>Health alert: everyone may experience more serious health effects</td>
                         <td>Everyone should avoid all outdoor exertion</td>
                     </tr>
                 </tbody>
             </table>
+
             <p id="cred">Source: Data provided by <a href="https://waqi.info/">waqi.info</a></p>
         </section>
     </main>
     
     <div id="footer-placeholder"></div>
+
     <script src="js/script.js"></script>
     <script type="text/javascript" src="https://widget.iqair.com/script/widget_v3.0.js"></script>
     <script>
@@ -106,8 +109,7 @@
             var mapTop = document.getElementById('interactive-map').offsetTop;
 
             document.querySelector('#interactive-map').scrollIntoView({
-                top: mapTop - 100,
-                behavior: 'smooth'
+                top: mapTop - 100, behavior: 'smooth'
             });
         }
     </script>

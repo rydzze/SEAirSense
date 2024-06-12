@@ -8,7 +8,6 @@
     
     <link rel="icon" type="image/png" href="img/seairsense.png">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/aqi-by-country.css">
 </head>
 
 <body>
@@ -18,7 +17,7 @@
         <section>
             <h2>AQI by Country</h2>
                         
-            <div id="countryWidgetsContainer"></div>
+            <div id="countriesAQI"></div>
             <script>
                 const countries = [
                     { name: "Malaysia", flag: "malaysia.svg", keys: ["666714fb58ec92479c18941a", "6669c8fcb0fe0070b5cd38d9", "6669c9a759554d056c9398d9", "6669c9aa3017650936877d6d"] },
@@ -34,7 +33,7 @@
 
                 function generateCountry(country) {
                     let html = `
-                        <div class="container">
+                        <div class="AQIcontainer">
                             <div class="left">
                                 <h3>${country.name}</h3>
                                 <img width="150px" src="img/flag/${country.flag}">
@@ -65,11 +64,11 @@
                     return allCountries;
                 }
 
-                const countryWidgetsContainer = document.getElementById('countryWidgetsContainer');
-                countryWidgetsContainer.innerHTML = generateAllCountries();
+                const countriesAQI = document.getElementById('countriesAQI');
+                countriesAQI.innerHTML = generateAllCountries();
             </script>
 
-            <div class="container">
+            <div class="AQIcontainer">
                 <div class="left">
                     <h3>Timor-Leste</h3>
                     <img width="150px" src="img/flag/timor_leste.png">
@@ -82,7 +81,7 @@
                 </div>
             </div>
 
-            <div class="container">
+            <div class="AQIcontainer">
                 <div class="left">
                     <h3>Singapore</h3>
                     <img width="150px" src="img/flag/singapore.svg">
