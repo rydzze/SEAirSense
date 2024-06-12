@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    gap: 75px;
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 50px auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.left h3 {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    margin: 10px;
+}

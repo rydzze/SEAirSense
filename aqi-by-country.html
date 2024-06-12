@@ -8,6 +8,7 @@
     
     <link rel="icon" type="image/png" href="img/seairsense.png">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/aqi-by-country.css">
 </head>
 
 <body>
@@ -16,6 +17,82 @@
     <main>
         <section>
             <h2>AQI by Country</h2>
+                        
+            <div id="countryWidgetsContainer"></div>
+            <script>
+                const countries = [
+                    { name: "Malaysia", flag: "malaysia.svg", keys: ["666714fb58ec92479c18941a", "6669c8fcb0fe0070b5cd38d9", "6669c9a759554d056c9398d9", "6669c9aa3017650936877d6d"] },
+                    { name: "Indonesia", flag: "indonesia.webp", keys: ["665c8cf6d8af85c372e09b00", "6669ca4aff97f2ccce243db6", "6669cad709e0d0db2df5a8d4", "6669cadafa54f9f7236074b4"] },
+                    { name: "Brunei", flag: "brunei.png", keys: ["6669cb6f1fd0ca994e9e2fdd", "6669cbd758ec92479c477067", "6669cbdaff97f2ccce2457f3", "6669cbddb0fe0070b5cd64b1"] },
+                    { name: "Thailand", flag: "thailand.svg", keys: ["665d8574548fb0ff4abbcc9c", "6669cca009e0d0db2df5c7a4", "6669ccf409e0d0db2df5cd58", "6669ccf7c283a8ce20825c6c"] },
+                    { name: "Philippines", flag: "philippines.webp", keys: ["6669cd95fa54f9f72360a75f", "6669cdb905af53ab4f8b6401", "6669cdbdf266a963ca8c781e", "6669cdc031aa7e82e3c6e8ac"] },
+                    { name: "Myanmar", flag: "myanmar.png", keys: ["6669ce11b0fe0070b5cd8b43", "6669ce3731aa7e82e3c6ef6d", "6669ce3b301765093687c8cd", "6669ce3e31aa7e82e3c6efde"] },
+                    { name: "Vietnam", flag: "vietnam.webp", keys: ["6669ce9231aa7e82e3c6f571", "6669ceae301765093687d0e8", "6669ceb5ff97f2ccce248ad9", "6669cec009e0d0db2df5ef87"] },
+                    { name: "Laos", flag: "laos.png", keys: ["6669cf34f266a963ca8c91a4", "6669cf6413f8deb0412bd0f3", "6669cf67301765093687df7b", "6669cf6b05af53ab4f8b807f"] },
+                    { name: "Cambodia", flag: "cambodia.webp", keys: ["6669cfa6fa54f9f72360cde8", "6669cfc505af53ab4f8b861e", "6669cfcac283a8ce20828f45", "6669cfce13f8deb0412bd795"] }
+                ];
+
+                function generateCountry(country) {
+                    let html = `
+                        <div class="container">
+                            <div class="left">
+                                <h3>${country.name}</h3>
+                                <img width="150px" src="img/flag/${country.flag}">
+                            </div>
+                        <div>
+                    `;
+                    
+                    for(let i = 0; i < country.keys.length; i += 2){
+                        html += `
+                            <div class="row">
+                                <div name="airvisual_widget" key="${country.keys[i]}"></div>
+                        `;
+                        if(i + 1 < country.keys.length){
+                            html += `<div name="airvisual_widget" key="${country.keys[i + 1]}"></div>`;
+                        }
+                        html += `</div>`;
+                    }
+                    
+                    html += `</div></div>`;
+                    return html;
+                }
+
+                function generateAllCountries() {
+                    let allCountries = "";
+                    countries.forEach(country => {
+                        allCountries += generateCountry(country);
+                    });
+                    return allCountries;
+                }
+
+                const countryWidgetsContainer = document.getElementById('countryWidgetsContainer');
+                countryWidgetsContainer.innerHTML = generateAllCountries();
+            </script>
+
+            <div class="container">
+                <div class="left">
+                    <h3>Timor-Leste</h3>
+                    <img width="150px" src="img/flag/timor_leste.png">
+                </div>
+                <div>
+                    <div class="row">
+                        <div name="airvisual_widget" key="6669d027b0fe0070b5cdae9f"></div>
+                        <div name="airvisual_widget" key="6669d046f266a963ca8ca2eb"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="left">
+                    <h3>Singapore</h3>
+                    <img width="150px" src="img/flag/singapore.svg">
+                </div>
+                <div>
+                    <div class="row">
+                        <div name="airvisual_widget" key="665c8c8cf9ab7b8c04c4a77e"></div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
